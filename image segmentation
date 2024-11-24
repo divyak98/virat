@@ -42,3 +42,24 @@ title('Automated Thresholding');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+If in original contrast stretching function; r1=r2=th, s1=0 and s2=L-1, the transformation function becomes a thresholding function, that creates a binary image. This function is shown as below. 
+ 
+Fig. Thresholding mapping transform function. 
+Automatic Threshold Detection by Otsu’s Method 
+In computer vision and image processing, Otsu's method is used to automatically perform clustering-based image thresholding, or, the reduction of a grayscale image to a binary image. The algorithm assumes that the image contains two classes of pixels following bi-modal histogram (foreground pixels and background pixels), it then calculates the optimum threshold separating the two classes so that their combined spread (intra-class variance) is minimal. The extension of the original method to multi-level thresholding is referred to as the Multi Otsu method. 
+Procedure: 
+1.Open an image using ‗imread‘ and ‗imshow‘ functions. Convert it to grayscale if required. 
+2.For Global Single thresholding (Manual), choose a threshold value ‗t‘. Obtain the image segmentation result by using ‗im2bw‘ function using ‗t‘.  Display the result. 
+3.For Global Dual thresholding (Manual), choose two threshold values ‗t1‘ and ‗t2‘. Obtain the image segmentation result by designing an algorithm using conditional statements.  Display the result. 
+4.For Global Single thresholding (Automated), use function ‗graythresh‘ to obtain the threshold value ‗t‘ automatically by Otsu‘s method. Obtain the image segmentation result by using ‗im2bw‘ function using ‗t‘.  Display the result. 
