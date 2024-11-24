@@ -31,3 +31,46 @@ title('Equalization Iteration 3');
 subplot(2,2,4);
 imhist(L);
 title('Histogram of Equalization Iteration 3');
+
+
+
+
+
+
+
+Statistical properties of an image Mean: 
+The mean is the average of a set of numbers, i.e. it is the central tendency (the way in which quantitative data tend to cluster around some value) of a collection of numbers taken as the sum of the numbers divided by the size of the collection. 
+Variance: 
+The mean is not always representative of the data, and other measures are needed to analyze the spread of the data. The variance is a measure of the distance of each number from the mean. In statistical approach, the variance is a measure of how far a set of numbers is spread out. It is one of several descriptors of a probability distribution, describing how far the numbers lie from the mean (expected value). In particular, the variance is one of the moments of a distribution. 
+Standard Deviation: 
+The standard deviation is considerably larger than the mean. Standard deviation shows how much variation or "dispersion" exists from the average (mean, or expected value). A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values. It is equivalent with square root of variance. 
+Profile 
+Profile is useful in obtaining details of amplitude variations in an image of a selected path. In short, profile is the grey values representation along a line. 
+ 
+ 
+Fig. Profile of an image along a line. 
+Histogram 
+Histogram of a digital image with gray levels in range [0, L-1] is a discrete function. It can be represented as: h(rk) = nk 
+Where, 
+rk = kth gray level, and  nk = no. of pixels of that image having intensity value (gray level) rk. 
+ 
+In histogram there are 4 primary possibilities as follows: 
+1.For a dark image the components of histogram on the low (dark) side. 
+2.For a bright image the component are on high (bright) side. 
+3.For an image with low contrast they are in the middle of gray side. 
+4.For an image with high contrast they are distributed or scattered. 
+Histogram manipulations can be used effectively for image enhancement operations. 
+Histogram Equalization 
+ 
+Histogram equalization is a method in image processing of contrast adjustment using the image's histogram. 
+Histogram equalization is done to spread the histogram components uniformly over the gray scale as far as possible. 
+For an image of size M×N, Histogram equalization is obtained by the following mapping function: 
+ 
+Where, 
+sk = input intensity level 
+rk = output intensity level after mapping 
+If nk = total no. of pixels of intensity rk, we can conclude that, 
+ 
+And thus, we can modify the above function as: 
+ 
+Thus processed image is obtained by mapping each pixel with intensity level rk into a corresponding pixel with level sk in output image. This transformation is called Histogram equalization or Histogram linearization.
