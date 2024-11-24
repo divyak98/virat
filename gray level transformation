@@ -34,3 +34,52 @@ title('Histogram of Original Image');
 subplot(2,2,4);
 imhist(X);
 title('Histogram of Contrast Streching Output for range 100 to 200');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Intensity Transformation Functions 
+When you are working with gray-scale images, sometimes you want to modify the intensity values. For instance, you may want to reverse black and the white intensities or you may want to make the darks darker and the lights lighter. An application of intensity transformations is to increase the contrast between certain intensity values so that you can pick out things in an image.  
+Generally, making changes in the intensity is done through Intensity Transformation Functions. Following are some main intensity transformation functions: 
+•photographic negative 
+•gamma transformation 
+•logarithmic transformations 
+•contrast-stretching transformations 
+Negative of an image 
+A positive image is a normal image. A negative image is a total inversion of a positive image, in which light areas appear dark and vice versa.  
+Film negatives usually also have much less contrast than the final images. This is compensated by the higher contrast reproduction by photographic paper or by increasing the contrast when scanning and post processing the scanned images. 
+Let, f(x,y) be the original image function. Now here, let, this image has total L intensity levels: from 0 to max i.e. L-1, r is the input intensity level before applying negative transformation, and s is the resultant intensity level after transformation. Then, the negative transformation mapping function T(r) can be formulated as:  
+Sf(x,y) = T(r) = (L-1)-rf(x,y) 
+ 
+Fig. Negative transformation mapping function. 
+Gamma Transformations 
+With Gamma Transformations, you can curve the grayscale components either to brighten the intensity (when gamma is less than one) or darken the intensity (when gamma is greater than one). The gamma factor (γ) controls the curve of the transfer function. The gamma transformation mapping function T(r) can be formulated as:  
+Sf(x,y) = T(r) = c*(rf(x,y))γ 
+ 
+Fig. Gamma transformation mapping functions. 
+Gamma transformations are an important part of the image display process. 
+Contrast Stretching 
+Low contrast images can result from poor illumination, lack of dynamic range in the imaging sensor etc. The idea behind contrast stretching is to increase the dynamic range of the gray levels in the image being processed. The mapping transformation function for contrast stretching can be represented as: 
+ 
+ 
+Fig. Contrast stretching mapping function. 
+ 
