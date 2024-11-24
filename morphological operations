@@ -67,3 +67,65 @@ bw6=bw-bw3;
 subplot(2,3,6);
 imshow(bw6);
 title('Edge Extraction');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Basic definitions: 
+Let, A, B: sets in 2-D integer space i.e. Z2 with components a = (a1, a2) and b = (b1, b2). 
+Then, 
+Translation of A by point z = (z1, z2):  
+(A)z = {c | c = a+z, for a ∈ A} Reflection of B: 
+ 
+Complement of A: 
+ 
+Difference of A & B: 
+A – B = A∩Bc 
+ 
+ 
+1.Dilation: 
+It expands an image. 
+Dilation of A by B can be represented as: 
+A xor B = {z|{B-)z u inverse A +! phi}
+ 
+ 
+Where, B is the structuring element in dilation and ϕ is empty set. 
+2.Erosion: 
+It shrinks an image. 
+Erosion of A by B can be represented as: 
+ 
+A Xor (-) B = {z|(B)z c_ A}
+ 
+3.Opening: 
+Generally smoothens the contour of an image, breaks isthmuses, eliminates protrusions. 
+
+A hollow dot B =(A Xor(-) B } xor(+) B
+
+4.Closing:  
+Smoothens sections of contours, but it generally fuses breaks, holes, gaps, etc. 
+
+
+A dark dot B =(A Xor(+) B } xor(-) B
+
+5.Boundary Extraction (or Edge Extraction): 
+It is the subtraction of the eroded image from the original image, i.e.: 
+
+A-(A xor(-) B}
